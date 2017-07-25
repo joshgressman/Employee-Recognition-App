@@ -1,6 +1,6 @@
 
 //To running
-// ng build
+// ng build --watch
 // $ node server.js
 
 var express = require('express');

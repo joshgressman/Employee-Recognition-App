@@ -1,0 +1,55 @@
+/* ======== MEDIA QUERIRES ========*/
+@media screen and (min-width: 991px){
+  .icon-box {
+    background: purple;
+    color: white;
+    text-align: center;
+    padding: 15% 0 2px 0;
+    height: 200px;
+
+  }
+
+}
+
+@media screen and (max-width: 768px){
+
+  .icon-box {
+    background: purple;
+    color: white;
+    text-align: center;
+    padding: 10px 0 2px 0;
+
+  }
+
+
+}
+
+
+
+@media screen and ( max-width: 568px ){
+
+  .icon-box {
+    background: purple;
+    color: white;
+    text-align: center;
+    padding: 10px 0 2px 0;
+
+  }
+
+}
+
+
+.icon-box {
+  background: purple;
+  color: white;
+  text-align: center;
+  box-shadow: 10px 10px 5px #888888;
+
+}
+
+
+
+i {
+  font-size: 4.0em;
+  padding-bottom: 5px;
+}
