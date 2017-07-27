@@ -8,8 +8,7 @@ var schema = new Schema({
   company: {type: String, required: true, lowercase: true},
   email: {type: String, required: true, unique: true},
   password: {type: String, required: true},
-  points: Number,
-  awards: {type: Array, "default": []}
+  points: Number
 });
 
 module.exports = mongoose.model('Employee', schema);
