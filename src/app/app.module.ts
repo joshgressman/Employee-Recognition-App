@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { AuthComponent } from './auth/auth.component';
 import { ViewRewardsComponent } from './view-rewards/view-rewards.component';
 import { GiveRewardsComponent } from './give-rewards/give-rewards.component';
-
+import { EmployeeService } from './services/employee.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { GiveRewardsComponent } from './give-rewards/give-rewards.component';
     HttpModule,
     routing
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
