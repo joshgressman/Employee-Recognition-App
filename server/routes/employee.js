@@ -12,8 +12,8 @@ router.post('/', function (req, res, next){
     company: req.body.company,
     email: req.body.email,
     password: bcrypt.hashSync(req.body.password, 10),
-    points: req.body.points,
-    rewards: req.body.rewards
+    points: req.body.points
+    // rewards: req.body.rewards
   });
   employee.save(function(err, result){
     if (err) {

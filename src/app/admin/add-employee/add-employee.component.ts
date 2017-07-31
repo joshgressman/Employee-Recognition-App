@@ -25,7 +25,8 @@ export class AddEmployeeComponent implements OnInit {
       this.myForm.value.company,
       this.myForm.value.email,
       this.myForm.value.password,
-      this.myForm.value.points = 0
+      this.myForm.value.points = 0,
+      this.myForm.value.rewards = []
     );
     console.log('employee', employee);
     this.employeeService.addEmployee(employee)
@@ -43,7 +44,8 @@ export class AddEmployeeComponent implements OnInit {
       company: new FormControl(null, Validators.required),
       email: new FormControl(null, [ Validators.required, Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")]),
       password: new FormControl(null, Validators.required),
-      points: new FormControl(null)
+      points: new FormControl(null),
+      awards: new FormControl(null)
 
   });
 }
