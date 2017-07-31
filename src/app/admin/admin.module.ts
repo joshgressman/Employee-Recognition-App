@@ -7,9 +7,10 @@ import { adminRouting } from './admin.routing';
 
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AddEmployeeComponent } from'./add-employee/add-employee.component';
+import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 
 @NgModule({
-  declarations: [AdminHomeComponent, AddEmployeeComponent],
+  declarations: [AdminHomeComponent, AddEmployeeComponent, ViewEmployeeComponent],
   imports: [CommonModule, FormsModule, ReactiveFormsModule, adminRouting]
 })
 

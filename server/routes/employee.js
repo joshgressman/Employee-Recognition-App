@@ -3,6 +3,19 @@ var router = express.Router();
 var bcrypt = require('bcryptjs');
 var Employee = require('../../schema/employee');
 
+router.get('/', function (req, res){
+  console.log('Getting employees');
+  Employee.find({}, function(err, data){
+    if (err) {
+    console.log("Couldnt get employees " , err);
+    res.sendStatus(500);
+  } else {
+    console.log('queried all employees');
+    res.send(data);
+  }
+  });
+});
+
 
 router.post('/', function (req, res, next){
   console.log(req.body);
