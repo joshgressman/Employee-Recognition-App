@@ -12,6 +12,7 @@ import { ViewRewardsComponent } from './view-rewards/view-rewards.component';
 import { GiveRewardsComponent } from './give-rewards/give-rewards.component';
 import { EmployeeService } from './services/employee.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import { EmployeeService } from './services/employee.service';
     ViewRewardsComponent,
     GiveRewardsComponent,
     AdminComponent
+
 
   ],
   imports: [

@@ -5,7 +5,7 @@ var Employee = require('../../schema/employee');
 
 router.get('/', function (req, res){
   console.log('Getting employees');
-  Employee.find({}, function(err, data){
+  Employee.find({}, null, {sort: {lastName: 1}}, function(err, data){
     if (err) {
     console.log("Couldnt get employees " , err);
     res.sendStatus(500);
