@@ -47,7 +47,8 @@
           <label for="email">Email</label>
           <input type="email" class="form-control" id="email" placeholder="{{editEmployee.email}}"/>
         </div>
-        <button class="btn btn-default" type="submit" >Add Employee</button>
+        <button class="btn btn-default" (click)="update = 'true'" *ngIf="!update">Edit Employee</button>
+        <button class="btn btn-default" type="submit" *ngIf="update">Update</button>
       </form>
     </div>
   </div>
