@@ -1,24 +1,54 @@
 
 <div class="container">
   <h3>{{company}} Team Members</h3>
-  <table class="table table-hover">
+  <table class="table table-hover" *ngIf="edit">
     <thead class="thead-inverse">
     <tr>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Email</th>
-      <th>Points</th>
-      <th>Awards Pending</th>
+      <!-- <th>Points</th>
+      <th>Awards Pending</th> -->
     </tr>
     </thead>
     <tbody>
-     <tr *ngFor="let employee of employees; let i = index">
+
+      <tr *ngFor="let employee of employees; let i = index">
        <td>{{employee.firstName | capitalize}}</td>
        <td>{{employee.lastName | capitalize}}</td>
        <td>{{employee.email}}</td>
-       <td>{{employee.points}}</td>
-       <td>Redemtion Alert</td>
+       <td>
+         <button class="btn btn-default btn-xs" (click)="onEdit(employee)">Manage</button>
+       </td>
+       <!-- <td>{{employee.points}}</td>
+       <td>Redemtion Alert</td> -->
      </tr>
     </tbody>
   </table>
+
+  <div class="employee-edit" *ngIf="!edit">
+    <div class="col-sm-12">
+      <h3>Manage Team Members</h3>
+      <span (click)="onEditBack()"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</span>
+      <hr>
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" id="firstName" placeholder="{{editEmployee.firstName}}"/>
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" class="form-control" id="lastName" placeholder="{{editEmployee.lastName}}"/>
+        </div>
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" class="form-control" id="company" placeholder="{{editEmployee.company}}"/>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="{{editEmployee.email}}"/>
+        </div>
+        <button class="btn btn-default" type="submit" >Add Employee</button>
+      </form>
+    </div>
+  </div>
 </div>

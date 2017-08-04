@@ -13,7 +13,8 @@ import { Employee } from '../employee.model';
 export class ViewEmployeeComponent implements OnInit {
   employees: Employee[] = [];
   company = "Sample Company"
-
+  edit = true;
+  editEmployee: Employee;
   constructor(private employeeService: EmployeeService){}
 
   ngOnInit(){
@@ -24,6 +25,20 @@ export class ViewEmployeeComponent implements OnInit {
        console.log("employees", this.employees)
      }
    )
+  }
+
+  onEdit(employee: Employee){
+    if(this.edit === true){
+      this.edit = false
+    } else if(this.edit == false){
+      this.edit = true;
+    }
+    this.editEmployee = employee;
+    console.log('edit employee', this.editEmployee);
+  }
+
+  onEditBack(){
+    this.edit = true;
   }
 
 }
