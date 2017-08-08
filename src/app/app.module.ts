@@ -11,7 +11,7 @@ import { AuthComponent } from './auth/auth.component';
 import { ViewRewardsComponent } from './view-rewards/view-rewards.component';
 import { GiveRewardsComponent } from './give-rewards/give-rewards.component';
 import { EmployeeService } from './services/employee.service';
-
+import { AwardsService } from './services/awards.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { EmployeeService } from './services/employee.service';
     HttpModule,
     routing
   ],
-  providers: [EmployeeService],
+  providers: [EmployeeService, AwardsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

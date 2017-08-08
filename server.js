@@ -12,6 +12,7 @@ var mongoose = require('mongoose');
 //API ROUTES
 var api = require('./server/routes/api');
 var employeeRoute = require('./server/routes/employee');
+var awardsRoute = require('./server/routes/awards');
 
 var app = express();
 
@@ -60,6 +61,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 // Set up api ROUTES
 app.use('/api', api);
 app.use('/employee', employeeRoute);
+app.use('/awards', awardsRoute);
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {

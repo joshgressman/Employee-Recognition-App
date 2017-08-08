@@ -1,10 +1,11 @@
 
 <header class="row spacing">
-  <nav class="col-md-8 col-md-offset-2">
+  <nav class="col-xs-12">
     <ul class="nav nav-tabs">
-      <li routerLinkActive="active"><a [routerLink]="['admin-home']">Signin</a></li>
-      <li routerLinkActive="active"><a [routerLink]="['add-employee']">Add Team Member</a></li>
-      <li routerLinkActive="active"><a [routerLink]="['view-employee']">View Team Members</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['admin-home']"><i class="fa fa-sign-in" aria-hidden="true"></i> Signin</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['add-employee']"><i class="fa fa-user-plus" aria-hidden="true"></i>Employee</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['view-employee']"><i class="fa fa-eye" aria-hidden="true"></i> Team</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['add-awards']"><i class="fa fa-trophy" aria-hidden="true"></i> Awards</a></li>
       <!-- <li routerLinkActive="active" *ngIf="isLoggedIn()"><a [routerLink]="['logout']">Logout</a></li> -->
     </ul>
   </nav>

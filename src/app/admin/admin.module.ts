@@ -9,9 +9,10 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AddEmployeeComponent } from'./add-employee/add-employee.component';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 import { CapitalizePipe  } from '../pipes/capitalize.pipe';
+import { AddAwardsComponent } from './add-awards/add-awards.component';
 
 @NgModule({
-  declarations: [AdminHomeComponent, AddEmployeeComponent, ViewEmployeeComponent, CapitalizePipe ],
+  declarations: [AdminHomeComponent, AddEmployeeComponent, ViewEmployeeComponent, CapitalizePipe, AddAwardsComponent ],
   imports: [CommonModule, FormsModule, ReactiveFormsModule, adminRouting]
 })
 
