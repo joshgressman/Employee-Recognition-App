@@ -1,8 +1,15 @@
 var express = require('express');
 var router = express.Router();
 var bcrypt = require('bcryptjs');
+var cloudinary = require('cloudinary');
 
 var Award = require('../../schema/award');
+
+cloudinary.config({
+  cloud_name: 'northman-digital',
+  api_key: '111453188575375',
+  api_secret: 'p2CPHUg5obr8L-lJsD8GAnap5qQ'
+});
 
 router.get('/', function (req, res){
   console.log('Getting awards');
