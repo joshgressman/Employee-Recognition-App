@@ -14,9 +14,21 @@ export class AddAwardsComponent implements OnInit {
   constructor(private awardsService: AwardsService) { }
 
   onSubmit(){
-   console.log("form", this.myForm);
-
+  //  console.log("form", this.myForm);
+  const award = new Awards(
+    this.myForm.value.title,
+    this.myForm.value.description,
+    this.myForm.value.cost,
+  );
+  console.log('award', award);
+  this.awardsService.addNewReward(award)
+  .subscribe(
+    data => console.log(data),
+    error => console.log(error)
+  );
+  this.myForm.reset();
   }
+
 
 ngOnInit(){
   this.myForm = new FormGroup({
@@ -26,5 +38,9 @@ ngOnInit(){
 });
 
 }
+
+
+
+
 
 }
