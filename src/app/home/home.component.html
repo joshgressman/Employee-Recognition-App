@@ -26,10 +26,8 @@
     </div>
   </div>
   <div class="row">
-    <p>
-      This will be a sectin of divs that dispaly image and details
-      for the reward options. Will populate dynamicaly from the
-      admin reward creation.
-    </p>
+  <div class="col-xs-3" *ngFor="let item of award; let i = index" id="award">
+    <h4>{{item.title}}</h4>
+  </div>
   </div>
 </div>

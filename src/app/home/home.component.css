@@ -59,3 +59,12 @@ i {
   font-size: 4.0em;
   padding-bottom: 5px;
 }
+
+#award {
+  background-color: green;
+  border-right: 1px white solid;
+  height: 140px;
+  box-shadow: 10px 10px 5px #888888;
+  text-align: center;
+  padding-top: 15px;
+}

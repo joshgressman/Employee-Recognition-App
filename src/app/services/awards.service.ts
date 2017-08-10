@@ -24,6 +24,14 @@ export class AwardsService {
 
   }
 
+  getAllAwards(){
+    return this.http.get('http://localhost:3000/award')
+    .map(res => res.json())
+    .catch((error: Response) => {
+             return Observable.throw(error.json());
+         });
+  }
+
 
 
 }

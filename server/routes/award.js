@@ -4,6 +4,21 @@ var bcrypt = require('bcryptjs');
 
 var Award = require('../../schema/award');
 
+router.get('/', function (req, res){
+  console.log('Getting awards');
+  Award.find({}, function(err, data){
+    if (err) {
+    console.log("Couldnt get awards " , err);
+    res.sendStatus(500);
+  } else {
+    console.log('queried all awards');
+    res.send(data);
+  }
+  });
+});
+
+
+
 router.post('/', function (req, res, next){
   console.log(req.body);
   var award = new Award({
