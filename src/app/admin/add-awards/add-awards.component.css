@@ -1,0 +1,10 @@
+
+.drop-container{
+  background-color: lightgray;
+  width: 140px;
+  height: 140px;
+  text-align: center;
+  color: gray;
+  padding: 50px 0 0 0;
+  margin-bottom: 4px;
+}

@@ -64,7 +64,7 @@ export class AddAwardsComponent implements OnInit {
         data: { foo: 'bar' },
         // concurrency: this.formData.concurrency
       };
-
+      console.log(event);
       this.uploadInput.emit(event);
     }
 
@@ -108,7 +108,9 @@ ngOnInit(){
 }
 
 
-
+// Since the documentation is pretty limited you may need to use the golf app as Ref
+// or fild alt ways. You will need to upload, send to cloud, then get back and save the url to
+// the mongo post route.
 
 
 }
