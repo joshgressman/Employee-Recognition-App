@@ -112,5 +112,7 @@ ngOnInit(){
 // or fild alt ways. You will need to upload, send to cloud, then get back and save the url to
 // the mongo post route.
 
+//Possible solution is amizon or firebase for images. The upload and the storage are two diff techs.
+
 
 }
