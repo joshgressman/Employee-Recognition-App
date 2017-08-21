@@ -15,6 +15,21 @@ import { GiveRewardsComponent } from './give-rewards/give-rewards.component';
 import { EmployeeService } from './services/employee.service';
 import { AwardsService } from './services/awards.service';
 
+//Firebase for image storage
+import { AngularFireModule } from 'angularfire2';
+
+// New imports to update based on AngularFire2 version 4
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyBr4QdsUMAb03gvselxOHki-u4IbtxuRxw",
+  authDomain: "",
+  databaseURL: "https://recognize-6397d.firebaseio.com/",
+  storageBucket: "gs://recognize-6397d.appspot.com/uploads",
+  messagingSenderId: ""
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +47,10 @@ import { AwardsService } from './services/awards.service';
     FormsModule,
     HttpModule,
     routing,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
 
   ],
   providers: [EmployeeService, AwardsService],
